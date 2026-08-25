@@ -11,8 +11,8 @@
 /// This structure does not store color space, but it is expected to work with `sRGB`.
 public struct ColorComponents: Hashable, Sendable, Codable, BitwiseCopyable {
     
-    @usableFromInline
-    internal var components: SIMD4<Double>
+    /// The underlying representation of the color in `simd4_double`.
+    public var components: SIMD4<Double>
     
     /// Creates a color component with a `SIMD4`.
     @inlinable
